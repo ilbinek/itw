@@ -1,0 +1,171 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 960px;
+    margin: auto;
+}
+
+.header {
+    padding: 1px;
+    margin-bottom: 0;
+    background-image: url("bg.jpg");
+    background-repeat: repeat;
+    color: white;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+nav li a {
+    position: relative;
+    padding-right: 40px;
+  }
+
+nav li a:hover::after {
+    content: url("menu_bullet.gif");
+    position: absolute;
+    bottom: -120%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15px;
+    height: 15px;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 2rem;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #b15e23;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.underTitle {
+    color: #d5a17c;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: justify;
+}
+
+.aboutSection {
+    padding: 1px;
+    background-image: linear-gradient(white, rgb(201, 201, 201));
+}
+
+.aboutText {
+    padding-bottom: 36px;
+}
+
+.classes {
+    color: #3c1f0a;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-bottom: 2px dotted #b15e23;
+}
+
+.classes p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border: 3px solid black;
+    min-width: 500px;
+}
+
+th {
+    color: #656565 ;
+    background-color: #d5a17c;
+    border: 2px solid black;
+    border-top: 2px dotted black;
+}
+
+td {
+    border-top: 2px solid black;
+    border-bottom: 2px solid #656565;
+}
+
+.working {
+    border-bottom: 2px dotted #b15e23;
+}
+
+.working a {
+    color: #3c1f0a;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+footer{
+    background: #3c1f0a;
+}
+
+footer ul{
+	margin-bottom: 0;
+	list-style-image: url("footer_list_bullet.gif");
+}
+
+dl{
+	width: 400px;
+}
+
+dt{
+	width: 100px;
+	float: left;
+	color: white;
+}
+
+dd{
+	float: right;
+	width: 200px;
+ 	text-align: right;
+}
+
+footer a {
+    color: #b15e23;
+    text-decoration: none;
+}
+
+footer h2 {
+    color: white;
+}

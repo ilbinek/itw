@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Name Surname</title>
+</head>
+<body>
+    <!-- NAVBAR  Big screen -->
+    <section class="navSec">
+
+        <div class="navBar desktop">
+            <nav>
+                <!-- LOGO + chnage css to space-between -->
+                <h2><a href="#">NAME SURNAME</a></h2>
+                <ul class="nav-ul" id="nav-ul">
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Experience">Experience</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Current">Current Work</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="mobile">
+            <div class="topnav">
+                <a href="#" class="active">Name Surname</a>
+                <!-- Navigation links (hidden by default) -->
+                <div id="myLinks">
+                    <a href="#About" onclick="hamMenu()">About</a>
+                    <a href="#Experience" onclick="hamMenu()">Experience</a>
+                    <a href="#Projects" onclick="hamMenu()">Projects</a>
+                    <a href="#Current" onclick="hamMenu()">Current Work</a>
+                    <a href="#Contact" onclick="hamMenu()">Contact</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="hamMenu()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+        </div>
+    </section>
+
+    <section class="dark" id="About">
+        <div class="content">
+            <div class="aboutHeader">
+                <img class="meImg" src="https://picsum.photos/1097" alt="A photo of me">
+                <h2 class="name">Name Surname</h2>
+            </div>
+            <p>I am an university student from the Czech Republic. I currently study second year of <a href="http://fit.vutbr.cz">VUT FIT</a>.</p>
+            <p>When I was younger, I was doing judo and that prepared me for life more than other things.
+                I was taught to never give up and always give everything I could into anything I was doing, like you would in a fight.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate mi sapien, sed varius massa sagittis quis.
+                Duis vel pellentesque ante, eget pharetra urna. Mauris sodales tortor tortor, sit amet volutpat diam pellentesque vel.<p>
+        </div>
+    </section>
+
+    <section class="light" id="Experience">
+        <div class="content first">
+            <h2>Experience</h2>
+            <p>Sweet lollipop croissant sugar plum pie. Tootsie roll apple pie jelly-o sweet roll candy canes marzipan cake. Cake jujubes jujubes tootsie roll. Marshmallow sweet roll soufflé ice cream gummi bears sweet. Ice cream chocolate bar cookie croissant candy canes marzipan chocolate. Chupa chups tiramisu pastry jelly beans bear claw chocolate bar. Brownie candy topping soufflé gingerbread tiramisu cake tootsie roll. Cake soufflé cake.</p>
+
+            <p>Candy canes chocolate bar cupcake danish tiramisu. Pastry apple pie muffin chocolate cake cake danish sesame snaps topping. Jujubes lollipop candy chupa chups. Sweet cotton candy tootsie roll chocolate bar cookie. Pie tiramisu tootsie roll gummi bears. Sesame snaps tootsie roll chocolate croissant tart cake cake. Donut topping dessert biscuit donut cookie croissant caramels sugar plum. Gingerbread icing lollipop danish danish donut tootsie roll. Chocolate tiramisu cake jelly sesame snaps halvah fruitcake candy tiramisu.</p>
+        </div>
+    </section>
+
+    <section class="dark" id="Projects">
+        <div class="content first">
+            <h2>Projects</h2>
+
+            <p>Cupcake ipsum dolor sit amet apple pie I love candy canes. Apple pie candy canes donut halvah dessert jelly beans wafer. I love muffin gummies cheesecake ice cream pastry jelly-o cake. Donut pudding oat cake. Gingerbread tootsie roll chocolate bonbon sweet roll I love bear claw dessert. Gummi bears croissant jujubes sugar plum sweet tootsie roll.</p>
+       
+            <p>You can take a look at my programming style on my <a href="http://github.com/ilbinek">GitHub</a>.</p>
+        </div>
+    </section>
+
+    <section class="light" id="Current">
+        <div class="content first">
+            <h2>Current work</h2>
+            <p>Currently most of my time goes into <a href="https://github.com/pmikova/java-runtime-decompiler">JRD - Java runtime decompiler</a>, which is a project I am working on during my internship.</p>
+            <p>My main work is fixing current bugs and adding new features, that make it easier to reverseengineer java programs while running in JVM, or just as plain JARs.</p>
+            <p>The upcoming feature is support for nested JARs. Listing and reading of all classes is implemented, you can monitor the progress on the <a href="https://github.com/pmikova/java-runtime-decompiler/pull/76">Pull Request</a>.</p>
+            <p>Support for rewriting of nested JARs will be added in the near future!</p>
+        </div>
+    </section>
+
+    <section class="dark" id="Contact">
+        <div class="content first">
+            <h2>Contact</h2>
+            <p>If you for whatever reason wish to contact me, you can do so on my <a href="mailto:xlogin0b@stud.fit.vutbr.cz">EMAIL</a>, or <a href="https://discord.gg/vutfit">DISCORD</a>.</p>
+        </div>
+    </section>
+
+    <!-- Smooth criminal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1200, function(){
+                window.location.hash = hash;
+            });
+            }
+        });
+        });
+    </script>
+
+    <!-- Menu Mobile -->
+    <script>
+        function hamMenu() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+        }
+    </script>
+
+</body>
+</html>

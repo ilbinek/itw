@@ -1,0 +1,191 @@
+html {
+    background-color: #616161;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Navigation bar - fixed to the top */
+.navSec {
+    position: fixed;
+    width: 100%;
+    background-color: #00e5ff;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.navBar {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.navBar a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #373737;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navBar h2 {
+    font-size: medium;
+}
+
+.icon:hover {
+    color: black;
+}
+
+.navTitle {
+    font-size: xx-large;
+}
+
+/* Using flex to arange contents */
+nav {
+    height: 7vh;
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #373737;
+    font-weight: 400;
+    font-style: normal;
+}
+
+li a:hover {
+    color: black;
+    font-weight: 700;
+}
+
+.mobile {
+    display: none;
+}
+
+/* navbar < 768 */
+@media (max-width: 767px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    /* Style the navigation menu */
+    .topnav {
+        overflow: hidden;
+        background-color: #00e5ff;
+        position: relative;
+    }
+    
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+        display: none;
+    }
+    
+    /* Style navigation menu links */
+    .topnav a {
+        padding: 14px 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #373737;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 17px;
+        display: block;
+    }
+    
+    /* Style the hamburger menu */
+    .topnav a.icon {
+        background: transparent;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+        color: black;
+    }
+    
+    /* Style the active link (or home/logo) */
+    .active {
+        background-color: #00e5ff;
+    }
+}
+
+.dark {
+    color: white;
+    background-color: #373737;
+}
+
+.light {
+    color: black;
+    background-color: #8e8e8e;
+}
+
+section {
+    padding-left: 24px;
+    padding-right: 24px;
+    align-content: center;
+}
+
+/* Content will always take all available space in the viewport */
+.content {
+    padding-top: 50px;
+    max-width: 1200px;
+    height: 100vh;
+    min-height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Using flex to arrange photo and text */
+.aboutHeader {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+p a {
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.meImg {
+    height: 20vh;
+    border-radius: 50%;
+    width: 20vh;
+}
